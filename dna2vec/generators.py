@@ -1,7 +1,7 @@
 import logbook
 import re
 from Bio import SeqIO
-from attic_util import util
+from dna2vec import util
 from itertools import islice
 import numpy as np
 

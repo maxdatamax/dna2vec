@@ -1,0 +1,8 @@
+inputs: example_inputs/chrUn_KI27075*.fa
+debug: true
+k-low: 3
+k-high: 5
+vec-dim: 100
+epoch: 10
+context: 10
+out-dir: results/
