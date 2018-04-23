@@ -116,7 +116,7 @@ def main():
     args = argp.parse_args()
 
     if args.debug:
-        out_dir = '/results'
+        out_dir = 'results/'
         log_level = 'DEBUG'
     else:
         out_dir = args.out_dir
@@ -139,8 +139,8 @@ def main():
             args.kmer_fragmenter))
 
     out_txt_filename = '{}.txt'.format(out_fileroot)
-    # with open(out_txt_filename, 'w') as summary_fptr:
-    with io.FileIO(out_txt_filename, "w") as summary_fptr
+    with open(out_txt_filename, 'w') as summary_fptr:
+    # with io.FileIO(out_txt_filename, "w") as summary_fptr:
         with Tee(summary_fptr):
             logbook.StreamHandler(sys.stdout, level=log_level).push_application()
             redirect_logging()
